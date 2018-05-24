@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 10:12:05 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/24 12:24:14 by dshumba          ###   ########.fr       */
+/*   Created: 2018/05/24 13:34:21 by dshumba           #+#    #+#             */
+/*   Updated: 2018/05/24 13:58:05 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	f_len(char const *s)
 {
-	size_t	i;
+	size_t		i;
 
 	i = 0;
 	while (s[i])
@@ -22,11 +22,11 @@ static size_t	f_len(char const *s)
 	return (i);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char			*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
-	char	*d;
+	size_t		i;
+	size_t		j;
+	char		*d;
 
 	i = 0;
 	j = 0;

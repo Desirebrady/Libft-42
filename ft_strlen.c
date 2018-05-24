@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 10:49:52 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/23 08:55:52 by dshumba          ###   ########.fr       */
+/*   Created: 2018/05/24 13:32:59 by dshumba           #+#    #+#             */
+/*   Updated: 2018/05/24 13:49:33 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t		ft_strlen(const char *str)
 {
-	size_t 	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')

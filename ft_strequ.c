@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 07:43:34 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/23 10:44:55 by dshumba          ###   ########.fr       */
+/*   Created: 2018/05/24 13:19:32 by dshumba           #+#    #+#             */
+/*   Updated: 2018/05/24 13:31:37 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+int		ft_strequ(char const *s1, char const *s2)
 {
 	size_t	i;
 

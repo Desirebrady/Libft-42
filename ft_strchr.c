@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 10:12:05 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/23 09:22:39 by dshumba          ###   ########.fr       */
+/*   Created: 2018/05/24 13:25:37 by dshumba           #+#    #+#             */
+/*   Updated: 2018/05/24 13:48:21 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	while(*s != (char)c)
-		if(!*s++)
+	while (*s != (char)c)
+		if (!*s++)
 			return (0);
 	return ((char *)s);
 }

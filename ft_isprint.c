@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 07:46:53 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/24 11:51:11 by dshumba          ###   ########.fr       */
+/*   Created: 2018/05/24 13:19:14 by dshumba           #+#    #+#             */
+/*   Updated: 2018/05/24 13:40:57 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int 	ft_isprint(int c)
+int		ft_isprint(int c)
 {
 	if (c >= 32 && c < 127)
 		return (1);

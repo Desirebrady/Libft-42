@@ -6,7 +6,7 @@
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 14:09:59 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/23 09:26:52 by dshumba          ###   ########.fr       */
+/*   Updated: 2018/05/26 09:41:25 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ char		*ft_strrchr(const char *s, int c)
 {
 	char	*ret;
 
-	while(*s++)
+	ret = 0;
+	while (*s++)
 	{
-		if(*s == (char) c)
+		if (*s == (char) c)
 			ret = (char *)s;
 	}
 	return (ret);

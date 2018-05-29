@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/28 08:39:14 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/29 12:00:19 by dshumba          ###   ########.fr       */
+/*   Created: 2018/05/29 16:16:31 by dshumba           #+#    #+#             */
+/*   Updated: 2018/05/29 16:37:33 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(const char *s)
 {
 	size_t	start;
 	size_t	len;
-	char	*str;
+
 	start = 0;
 	if (!s)
 		return (NULL);

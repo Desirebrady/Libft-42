@@ -5,34 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 13:47:03 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/29 14:10:10 by dshumba          ###   ########.fr       */
+/*   Created: 2018/05/29 16:06:11 by dshumba           #+#    #+#             */
+/*   Updated: 2018/05/29 16:06:27 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t 	x;
-	size_t	y;
-	char 	*s1;
+	size_t i;
+	size_t k;
 
-	s1 = (char *)str;
-	x = 0;
-	y = 0;
-	if (to_find[0] == '\0')
-		return (s1);
-	while (str[x] && x < len)
+	i = 0;
+	k = 0;
+	while (little[k] != '\0')
+		k++;
+	if (k == 0)
+		return (char*)(big);
+	while (big[i] != '\0')
 	{
-		while (str[x] == to_find[y] && str[x])
+		k = 0;
+		while (big[i + k] == little[k] && little[k] != '\0')
+			k++;
+		if (little[k] == '\0')
 		{
-			x++;
-			y++;
+			if (i + k > len)
+				break ;
+			return (char*)(big + i);
 		}
-		if (to_find[y] == '\0')
-			return (&s1[x-y]);
-		x++;
+		i++;
 	}
-	return (0);
+	return (NULL);
 }

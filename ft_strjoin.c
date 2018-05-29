@@ -6,7 +6,7 @@
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 13:34:21 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/29 13:57:15 by dshumba          ###   ########.fr       */
+/*   Updated: 2018/05/29 16:16:06 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,27 @@ static size_t	f_len(char const *s)
 
 char			*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t		i;
-	size_t		j;
-	char		*d;
+	int			i;
+	int			j;
+	char		*str;
 
 	i = 0;
 	j = 0;
-	d = malloc(sizeof(char) * (f_len(s1) + f_len(s2)) + 1);
-	if (!d)
+	if (!s1 || !s2)
 		return (NULL);
-	while (s1[i])
+	str = (char*)malloc(sizeof(char) * (f_len(s1) + f_len(s2)) + 1);
+	if (str == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		d[i] = s1[i];
+		str[i] = s1[i];
 		i++;
 	}
-	while (s2[j])
+	while (s2[j] != '\0')
 	{
-		d[i] = s2[j];
-		i++;
+		str[i + j] = s2[j];
 		j++;
 	}
-	d[i] = '\0';
-	return (d);
+	str[i + j] = '\0';
+	return (str);
 }

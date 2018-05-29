@@ -6,7 +6,7 @@
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 13:25:52 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/25 12:28:31 by dshumba          ###   ########.fr       */
+/*   Updated: 2018/05/29 13:29:21 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_strclr(char *string)
 	size_t	i;
 
 	i = 0;
+	if (string == NULL)
+		return ;
 	while (string[i] != '\0')
 	{
 		string[i] = '\0';

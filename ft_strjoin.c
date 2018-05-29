@@ -6,7 +6,7 @@
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 13:34:21 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/24 13:58:05 by dshumba          ###   ########.fr       */
+/*   Updated: 2018/05/29 13:57:15 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	d = malloc(sizeof(char) * (f_len(s1) + f_len(s2)) + 1);
 	if (!d)
-		return (0);
+		return (NULL);
 	while (s1[i])
 	{
 		d[i] = s1[i];

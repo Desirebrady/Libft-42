@@ -6,7 +6,7 @@
 #    By: dshumba <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/24 11:10:00 by dshumba           #+#    #+#              #
-#    Updated: 2018/05/28 11:06:08 by dshumba          ###   ########.fr        #
+#    Updated: 2018/05/29 13:41:32 by dshumba          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,25 +72,22 @@ FILES = ft_isalnum.c\
 	   	ft_lstiter.c\
 	   	ft_strsplit.c\
 
-HEADER = libft.h
-
 OBJECT			= $(FILES:%.c=%.o)
 	
 all: $(NAME)
 
 $(NAME): $(OBJECT)
-	ar -rc $(NAME) $(OBJECT)
+	ar rc $(NAME) $(OBJECT)
 
 $(OBJECT): $(FILES)
-	$(CC) -c $(CFLAGS) $(FILES) -I $(HEADER)
+	$(CC) -c $(CFLAGS) $(FILES)
 	
 clean:
-	/bin/rm -f $(OBJECT)
+	rm -f $(OBJECT)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	rm -f $(NAME)
 
-re:	
-	fclean all
+re:	fclean all
 
 .PHONY: clean fclean all re

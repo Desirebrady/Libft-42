@@ -6,34 +6,42 @@
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 13:18:03 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/28 08:20:36 by dshumba          ###   ########.fr       */
+/*   Updated: 2018/05/29 12:21:42 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *s)
+static int		exceeds_n(int n)
 {
-	int		sign;
-	int		res;
-	size_t	i;
+	if (n == -1)
+		return (0);
+	return (-1);
+}
 
-	sign = 1;
-	res = 0;
+int				ft_atoi(const char *str)
+{
+	int			i;
+	int			lim;
+	int			n;
+
+	n = 1;
+	while ((*str >= '\t' && *str <= '\r') || *str == 32 || *str == '0')
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			n = -1;
+		str++;
+	}
+	lim = 0;
 	i = 0;
-	while ((s[i] >= 9 && s[i] <= 13) || s[i] == 32)
-		i++;
-	if (s[i] == '-')
+	while (*str >= '0' && *str <= '9' && *str)
 	{
-		sign = -1;
-		i++;
+		i = (i * 10) + (*str++ - '0');
+		if (lim >= 19)
+			return (exceeds_n(n));
+		lim++;
 	}
-	else if (s[i] == '+')
-		i++;
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		res = res * 10 + (s[i] - '0');
-		i++;
-	}
-	return (res * sign);
+	return (i * n);
 }

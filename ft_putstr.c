@@ -6,7 +6,7 @@
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 13:47:40 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/24 13:54:18 by dshumba          ###   ########.fr       */
+/*   Updated: 2018/05/29 13:15:34 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr(char const *str)
 	int	i;
 
 	i = 0;
+	if (str == NULL)
+		return ;
 	while (str[i] != '\0')
 	{
 		ft_putchar(str[i]);

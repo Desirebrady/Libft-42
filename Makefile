@@ -6,13 +6,13 @@
 #    By: dshumba <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/24 11:10:00 by dshumba           #+#    #+#              #
-#    Updated: 2018/05/29 14:57:38 by dshumba          ###   ########.fr        #
+#    Updated: 2018/05/29 16:49:16 by dshumba          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 NAME = libft.a
-CFLAGS	=	-Wall -Werror -Wextra -I.
+CFLAGS	= -Wall -Werror -Wextra -I. -c
 FILES = ft_isalnum.c\
 	   	ft_isprint.c\
 	   	ft_memchr.c\
@@ -72,7 +72,7 @@ FILES = ft_isalnum.c\
 	   	ft_lstiter.c\
 	   	ft_strsplit.c\
 
-OBJECT			= $(FILES:%.c=%.o)
+OBJECT = $(FILES:%.c=%.o)
 	
 all: $(NAME)
 
@@ -80,7 +80,7 @@ $(NAME): $(OBJECT)
 	ar rc $(NAME) $(OBJECT)
 
 $(OBJECT): $(FILES)
-	$(CC) -c $(CFLAGS) $(FILES)
+	$(CC) $(CFLAGS) $(FILES)
 	
 clean:
 	rm -f $(OBJECT)

@@ -6,7 +6,7 @@
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 08:45:43 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/29 15:11:54 by dshumba          ###   ########.fr       */
+/*   Updated: 2018/05/30 09:24:20 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <stdio.h>
 # include <unistd.h>
 
-int				ft_iswhitespace(int c);
 int				ft_atoi(const char *s);
 void			ft_bzero(void *s, size_t n);
 int				ft_isalpha(int j);

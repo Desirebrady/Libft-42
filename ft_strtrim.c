@@ -6,7 +6,7 @@
 /*   By: dshumba <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 16:16:31 by dshumba           #+#    #+#             */
-/*   Updated: 2018/05/29 16:37:33 by dshumba          ###   ########.fr       */
+/*   Updated: 2018/05/30 09:30:29 by dshumba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char		*ft_strtrim(const char *s)
 {
 	size_t	start;
 	size_t	len;
+	char *str;
 
 	start = 0;
 	if (!s)
